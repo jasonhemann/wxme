@@ -346,7 +346,7 @@
       (define got-char (read-char port))
       (unless (equal? got-char expected-char)
         (read-error who
-                    (format "expected a ~s when reading bytes, got ~s"
+                    (format "a ~s when reading bytes, got ~s"
                             expected-char
                             got-char)
                     what port)))
@@ -365,7 +365,7 @@
        (set! bts (read-bytes size port))
        (unless (and (bytes? bts) (= (bytes-length bts) size))
          (read-error who
-                     (format "expected ~a bytes, got ~a"
+                     (format "~a bytes, got ~a"
                              size
                              (if (bytes? bts)
                                  (bytes-length bts)
